@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pioneer-Bank</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
-    <div id="login-area">
-        <h1 class="text-center">Welcome to Pioneer Bank</h1>
-
-        <div class="submit-area">
-            <h4>Login</h4>
-            <input type="email" placeholder="Email" class="form-control" name="email" required>
-            <br>
-            <input type="password" placeholder="Password" class="form-control" name="password" required>
-            <br>
-            <button class="btn btn-success">Enter</button> 
+    
+    <div class="container">
+        <div id="login-area">
+            <h1 class="text-center">Welcome to Pioneer Bank</h1>
+    
+            <div class="submit-area">
+                <h4>Login</h4>
+                <input type="email" placeholder="Email" class="form-control" name="email" required>
+                <br>
+                <input type="password" placeholder="Password" class="form-control" name="password" required>
+                <br>
+                <button id="login" class="btn btn-success">Enter</button> 
+            </div>
+        </div>
+    
+        <div id="transation-area">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="status deposit">
+                        <h5>Deposit</h5>
+                        <h2>$ 00</h2>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="status withdraw">
+                        <h5>Withdraw</h5>
+                        <h2>$ 00</h2>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="status banlance">
+                        <h5>Banlance</h5>
+                        <h2>$ 00</h2>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
