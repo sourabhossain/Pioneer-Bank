@@ -1,5 +1,6 @@
 body {
-    padding: 100px;
+    padding: 100px 0;
+    font-family: 'Rowdies', cursive;
 }
 
 .submit-area {
@@ -11,4 +12,27 @@ body {
 
 #transation-area {
     display: none;
+}
+
+.status {
+    margin: 0 20px;
+    padding: 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+.status h2 {
+    font-weight: bold;
+}
+
+.deposit {
+    background-color: slateblue;
+}
+
+.withdraw {
+    background-color: lightsalmon;
+}
+
+.banlance {
+    background-color: orange;
 }
