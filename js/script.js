@@ -12,16 +12,15 @@ document.querySelector("#addDeposit").addEventListener("click", function(event) 
     const depositAmount = document.querySelector("#depositAmount").value;
     const depositNumber = parseFloat(depositAmount);
     
-    const currentDeposit = document.querySelector("#currentDeposit").innerText;
-    const currentDepositNumber = parseFloat(currentDeposit);
-    const totalDeposit = depositNumber + currentDepositNumber;
-    
-    document.querySelector("#currentDeposit").innerText = totalDeposit;
-    
-    const currentBanlance = document.querySelector("#currentBanlance").innerText;
-    const currentBanlanceNumber = parseFloat(currentBanlance);
-    const totalBanlance = depositNumber + currentBanlanceNumber;
+    updateSpanText("#currentDeposit", depositNumber);
+    updateSpanText("#currentBanlance", depositNumber);
 
-    document.querySelector("#currentBanlance").innerText = totalBanlance;
     document.querySelector("#depositAmount").value = "";
 });
+
+function updateSpanText(id, depositNumber) {
+    const current = document.querySelector(id).innerText;
+    const currentNumber = parseFloat(current);
+    const totalAmount = depositNumber + currentNumber;
+    document.querySelector(id).innerText = totalAmount;
+}
