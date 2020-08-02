@@ -20,7 +20,10 @@ document.querySelector("#addDeposit").addEventListener("click", function() {
 // withdraw button event handler
 document.querySelector("#addWithdraw").addEventListener("click", function() {
     const withdrawNumber = getInputNumber("#withdrawAmount");
-     
+    
+    updateSpanText("#currentWithdraw", withdrawNumber);
+    updateSpanText("#currentBanlance", -1 * withdrawNumber);
+    
     document.querySelector("#withdrawAmount").value = "";
 });
 
@@ -30,9 +33,9 @@ function getInputNumber(id) {
     return amountNumber;
 }
 
-function updateSpanText(id, depositNumber) {
+function updateSpanText(id, addedNumber) {
     const current = document.querySelector(id).innerText;
     const currentNumber = parseFloat(current);
-    const totalAmount = depositNumber + currentNumber;
+    const totalAmount = addedNumber + currentNumber;
     document.querySelector(id).innerText = totalAmount;
 }
