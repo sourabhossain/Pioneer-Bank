@@ -9,12 +9,19 @@ document.querySelector("#login").addEventListener("click", function(event) {
 
 // deposit button event handler
 document.querySelector("#addDeposit").addEventListener("click", function(event) {
-    const depositAmount = document.querySelector("#depositAmount");
-    const depositNumber = parseFloat(depositAmount.value);
+    const depositAmount = document.querySelector("#depositAmount").value;
+    const depositNumber = parseFloat(depositAmount);
     
     const currentDeposit = document.querySelector("#currentDeposit").innerText;
     const currentDepositNumber = parseFloat(currentDeposit);
     const totalDeposit = depositNumber + currentDepositNumber;
+    
     document.querySelector("#currentDeposit").innerText = totalDeposit;
+    
+    const currentBanlance = document.querySelector("#currentBanlance").innerText;
+    const currentBanlanceNumber = parseFloat(currentBanlance);
+    const totalBanlance = depositNumber + currentBanlanceNumber;
+
+    document.querySelector("#currentBanlance").innerText = totalBanlance;
     document.querySelector("#depositAmount").value = "";
 });
