@@ -11,8 +11,12 @@ document.querySelector("#login").addEventListener("click", function(event) {
 document.querySelector("#addDeposit").addEventListener("click", function() {
     const depositNumber =  getInputNumber("#depositAmount")
     
-    updateSpanText("#currentDeposit", depositNumber);
-    updateSpanText("#currentBanlance", depositNumber);
+    if (depositNumber < 0) {
+        alert("Deposit number cannot be negative.");
+    } else {
+        updateSpanText("#currentDeposit", depositNumber);
+        updateSpanText("#currentBanlance", depositNumber);
+    }
 
     document.querySelector("#depositAmount").value = "";
 });
